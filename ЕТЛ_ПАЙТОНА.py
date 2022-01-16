@@ -57,3 +57,6 @@ frame = pd.concat(li, axis=0, ignore_index=True)
 
 #print()
 frame.head()
+
+os.makedirs()
+os.makedirs(path, exist_ok=[True|False])
