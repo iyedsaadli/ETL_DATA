@@ -29,3 +29,12 @@
         for row in csv_reader:
           rows.append(row)
          
+### 3 ] USE TEMPORARY FILES TO STORE DATA TEMPORARY DURING PROGRAM EXECUTION
+      
+      import tempfile
+      temp = tempfile.TemporaryFile()
+      temp.write(b"foo bar")
+      # set the pointer at the starting of the page
+      temp.seek(0)
+      data = temp.read()
+      temp.close()
