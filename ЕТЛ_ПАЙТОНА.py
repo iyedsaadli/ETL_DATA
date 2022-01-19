@@ -47,8 +47,7 @@ all_files = glob.glob(the_path + "/*.csv")
 li = []
 
 for file in all_files:
-    files = file
-    data = pd.read_csv(files, index_col=None, header=0, encoding = "unicode_escape")
+    data = pd.read_csv(file, index_col=None, header=0, encoding = "unicode_escape")
     li.append(data)
     
 # Concat all data in one list
