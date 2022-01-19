@@ -40,14 +40,14 @@ df.head()
 
 # To read all files from a folder
 
-the_path = "C:/***/**/**/**/--/"
+the_path = r"C:/***/**/**/**/--/"
 
 all_files = glob.glob(the_path + "/*.csv")
 
 li = []
 
 for file in all_files:
-    files = file.replace("\\","/")
+    files = file
     data = pd.read_csv(files, index_col=None, header=0, encoding = "unicode_escape")
     li.append(data)
     
